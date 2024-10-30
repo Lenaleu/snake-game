@@ -1,0 +1,14 @@
+version: "2.3"
+services:
+  node:
+    image: grimleng/snake-game
+    container_name: snake
+    user: "node"
+    working_dir: /app
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    volumes:
+      - ./:/app
+    ports:
+      - "80:3000"
